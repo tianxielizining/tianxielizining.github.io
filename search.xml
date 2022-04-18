@@ -3,7 +3,10 @@
   <entry>
     <title>基于Hexo和Github搭建博客</title>
     <url>/2022/04/18/blog_setup/</url>
-    <content><![CDATA[<h2 id="本地搭建Blog"><a href="#本地搭建Blog" class="headerlink" title="本地搭建Blog"></a>本地搭建Blog</h2><h2 id="与Github关联"><a href="#与Github关联" class="headerlink" title="与Github关联"></a>与Github关联</h2><h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><h2 id="美化前端"><a href="#美化前端" class="headerlink" title="美化前端"></a>美化前端</h2>]]></content>
+    <content><![CDATA[<p>在本篇文章中，会介绍如何使用Hexo和Github在mac屏填上进行博客的搭建～</p>
+ <span id="more"></span>
+
+<h2 id="本地搭建Blog"><a href="#本地搭建Blog" class="headerlink" title="本地搭建Blog"></a>本地搭建Blog</h2><h2 id="与Github关联"><a href="#与Github关联" class="headerlink" title="与Github关联"></a>与Github关联</h2><h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><h2 id="美化前端"><a href="#美化前端" class="headerlink" title="美化前端"></a>美化前端</h2>]]></content>
       <categories>
         <category>搭建博客</category>
       </categories>
@@ -17,6 +20,8 @@
     <title>Hello World</title>
     <url>/2022/04/09/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+ <span id="more"></span>
+
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>

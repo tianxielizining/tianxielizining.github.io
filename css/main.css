@@ -961,7 +961,7 @@ pre .javascript .function {
   padding: 0 10px;
 }
 .headband {
-  background: rgba(192,192,192,0.7);
+  background: rgba(85,85,84,0.7);
   height: 3px;
 }
 .site-meta {
@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9d6ea2;
+  background: #41240a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

@@ -939,7 +939,7 @@ pre .javascript .function {
   }
 }
 .header {
-  background: transparent;
+  background: rgba(255,255,255,0.7);
 }
 .header-inner {
   margin: 0 auto;
@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #163dda;
+  background: #ff0b52;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

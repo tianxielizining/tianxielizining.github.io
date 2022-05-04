@@ -55,7 +55,7 @@
 <ol>
 <li><p>在 Error Surface 的横轴上随机选取一个初始的点 $w_0$。</p>
 </li>
-<li><p>计算 $\frac{\partial L}{\partial w}|<em>{w&#x3D;w_0}$ ，也就是切线斜率，如果斜率是负数，代表左边比较高，右边比较低，要想得到比较低的Loss，需要增大$w_0$；反之，左边比较低，右边比较高，需要减小$w_0$。增大和减小$w_0$的量取决于：斜率的大小（大则步幅大）以及 学习速率 （learning rate ， $\eta$ ，自己设定，也叫 hyperparameters（需要自己设定的参数）），量为$\eta\frac{\partial L}{\partial w}|</em>{w&#x3D;w_0}$，$w_1 &#x3D; w_0 - \eta\frac{\partial L}{\partial w}|_{w&#x3D;w_0}$。</p>
+<li><p>计算 $\frac{ \partial L } { \partial w}|_ {w &#x3D; w_0}$ ，也就是切线斜率，如果斜率是负数，代表左边比较高，右边比较低，要想得到比较低的Loss，需要增大$w_0$；反之，左边比较低，右边比较高，需要减小$w_0$。增大和减小$w_0$的量取决于：斜率的大小（大则步幅大）以及 学习速率 （learning rate ， $\eta$ ，自己设定，也叫 hyperparameters（需要自己设定的参数）），量为$\eta \frac { \partial L} { \partial w}|<em>{ w &#x3D; w_0}$，$w_1 &#x3D; w_0 - \eta \frac{ \partial L }{ \partial w}|</em> { w &#x3D; w_0}$。</p>
 </li>
 <li><p>Update $w$ Iterativey ，直到达到指定的计算次数（例100万次，也是一个hyperparameter） 或 斜率为$0$.</p>
 </li>

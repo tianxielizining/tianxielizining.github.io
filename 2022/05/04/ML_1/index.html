@@ -30,7 +30,7 @@
 <meta property="og:description" content="本章为第一讲的学习笔记：深度学习基本概念简介（上），视频链接。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-04T13:41:39.006Z">
+<meta property="article:modified_time" content="2022-05-04T13:59:24.850Z">
 <meta property="article:author" content="Zining Li">
 <meta property="article:tag" content="ML">
 <meta name="twitter:card" content="summary">
@@ -201,7 +201,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-05-04 00:00:00 / 修改时间：21:41:39" itemprop="dateCreated datePublished" datetime="2022-05-04T00:00:00+08:00">2022-05-04</time>
+              <time title="创建时间：2022-05-04 00:00:00 / 修改时间：21:59:24" itemprop="dateCreated datePublished" datetime="2022-05-04T00:00:00+08:00">2022-05-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,7 +252,7 @@
 <ol>
 <li><p>在 Error Surface 的横轴上随机选取一个初始的点 $w_0$。</p>
 </li>
-<li><p>计算 $\frac{\partial L}{\partial w}|<em>{w&#x3D;w_0}$ ，也就是切线斜率，如果斜率是负数，代表左边比较高，右边比较低，要想得到比较低的Loss，需要增大$w_0$；反之，左边比较低，右边比较高，需要减小$w_0$。增大和减小$w_0$的量取决于：斜率的大小（大则步幅大）以及 学习速率 （learning rate ， $\eta$ ，自己设定，也叫 hyperparameters（需要自己设定的参数）），量为$\eta\frac{\partial L}{\partial w}|</em>{w&#x3D;w_0}$，$w_1 &#x3D; w_0 - \eta\frac{\partial L}{\partial w}|_{w&#x3D;w_0}$。</p>
+<li><p>计算 $\frac{ \partial L } { \partial w}|_ {w &#x3D; w_0}$ ，也就是切线斜率，如果斜率是负数，代表左边比较高，右边比较低，要想得到比较低的Loss，需要增大$w_0$；反之，左边比较低，右边比较高，需要减小$w_0$。增大和减小$w_0$的量取决于：斜率的大小（大则步幅大）以及 学习速率 （learning rate ， $\eta$ ，自己设定，也叫 hyperparameters（需要自己设定的参数）），量为$\eta \frac { \partial L} { \partial w}|<em>{ w &#x3D; w_0}$，$w_1 &#x3D; w_0 - \eta \frac{ \partial L }{ \partial w}|</em> { w &#x3D; w_0}$。</p>
 </li>
 <li><p>Update $w$ Iterativey ，直到达到指定的计算次数（例100万次，也是一个hyperparameter） 或 斜率为$0$.</p>
 </li>

@@ -80,15 +80,15 @@
 <p>Model的类型</p>
 <ul>
 <li><p>Linear model： $y &#x3D; b + wx_1$ (单个特征)   $y &#x3D; b + \sum_j w_j x_j$ (多个特征)</p>
-<p><img src="/image/image-20220507130047612.jpg" alt="image-20220507130047612"></p>
+<p><img src="/../image/image-20220507130047612.jpg" alt="image-20220507130047612"></p>
 </li>
 <li><p>Piecewise Linear model：可以用Sigmoid 或 Rectified Linear Unit (ReLU) 等 Activation Function 来表示。</p>
 <ul>
 <li><p>Sigmoid： $ y &#x3D; b + \sum _ i c_i sigmoid (b_i + w_i x_1)$ (单个特征)   $y &#x3D; b + \sum <em>i c_i sigmoid (b_i + \sum_j w</em>{ ij } x_j)$ (多个特征)， 其中 $sigmoid(x) &#x3D; \frac { 1 } {1 + e ^{ - x}}$.</p>
-<p>![image-20220507154018256](image&#x2F;db 9.png)</p>
+<p>![image-20220507154018256](..&#x2F;image&#x2F;db 9.png)</p>
 </li>
 <li><p>ReLU： $y &#x3D; b + \sum_{2i} c_i max(0, b_i +  w_i x_1)$  (单个特征)  $y &#x3D; b + \sum_{2i} c_i max(0, b_i + \sum_j w_{ij} x_j)$  （多个特征）这里sum的是$2i$是因为两个 ReLU 才能合成一个 sigmoid。 ReLU和Sigmoid相比更加好。 </p>
-<p><img src="/image/image-20220507154700894.png" alt="image-20220507154700894"></p>
+<p><img src="/../image/image-20220507154700894.png" alt="image-20220507154700894"></p>
 </li>
 </ul>
 </li>
@@ -104,7 +104,7 @@
 </li>
 </ol>
 <p>​     实际上，在做 Gradient Decent 的时候，会把原始数据分成一个一个的Batch。用第 $i$ 个Batch里的Data 算 Loss ，然后更新$\Theta _i$，然后用更新后的$\Theta_i$ 来对第 $i+1$ 个 Batch 的 Data 算 Loss  然后继续更新。每一次更新参数叫做一次Update。遍历完所有的Batch之后叫做一个Epoch。Batch 的 Size 也是一个 hyperparameter 。</p>
-<h3 id="一些新名字"><a href="#一些新名字" class="headerlink" title="一些新名字"></a>一些新名字</h3><p><img src="/image/image-20220507155248015.png" alt="image-20220507155248015"></p>
+<h3 id="一些新名字"><a href="#一些新名字" class="headerlink" title="一些新名字"></a>一些新名字</h3><p><img src="/../image/image-20220507155248015.png" alt="image-20220507155248015"></p>
 <p>Neuron, Neural Network, hidden layer, DeepLearning 如图所示，其中$a_i &#x3D;  sigmoid (b_i + \sum_j w_{ ij } x_j )$ 或 $a_i &#x3D;  max(0, b_i + \sum_j w_{ij} x_j)$。</p>
 <p>Overfitting：在训练资料上在变好，但是在实际上没有变好。</p>
 ]]></content>

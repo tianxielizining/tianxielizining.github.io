@@ -84,10 +84,20 @@
 </li>
 <li><p>Piecewise Linear model：可以用Sigmoid 或 Rectified Linear Unit (ReLU) 等 Activation Function 来表示。</p>
 <ul>
-<li><p>Sigmoid： $ y &#x3D; b + \sum _ i c_i sigmoid (b_i + w_i x_1)$ (单个特征)   $y &#x3D; b + \sum <em>i c_i sigmoid (b_i + \sum_j w</em>{ ij } x_j)$ (多个特征)， 其中 $sigmoid(x) &#x3D; \frac { 1 } {1 + e ^{ - x}}$.</p>
-<p>![image-20220507154018256](..&#x2F;image&#x2F;db 9.png)</p>
+<li><p>Sigmoid：$ sigmoid ( x ) &#x3D; \frac { 1 } {1 + e ^{ - x} }$.</p>
+<ul>
+<li>$ y &#x3D; b + \sum _ i c_i sigmoid (b_i + w_i x_1)$ (单个特征)  </li>
+<li>$y &#x3D; b + \sum_i c_i sigmoid (b_i + \sum_j w_{ i j } x_j) $ (多个特征)</li>
+</ul>
 </li>
-<li><p>ReLU： $y &#x3D; b + \sum_{2i} c_i max(0, b_i +  w_i x_1)$  (单个特征)  $y &#x3D; b + \sum_{2i} c_i max(0, b_i + \sum_j w_{ij} x_j)$  （多个特征）这里sum的是$2i$是因为两个 ReLU 才能合成一个 sigmoid。 ReLU和Sigmoid相比更加好。 </p>
+</ul>
+<p><img src="/../image/db9.png" alt="image-20220507154018256"></p>
+<ul>
+<li><p>ReLU： ReLU和Sigmoid相比更加好。 </p>
+<ul>
+<li>$y &#x3D; b + \sum_{2i} c_i max(0, b_i +  w_i x_1)$  (单个特征)</li>
+<li>$y &#x3D; b + \sum_{2i} c_i max(0, b_i + \sum_j w_{ij} x_j)$  （多个特征）这里 sum 的是 $2i$ 是因为两个 ReLU 才能合成一个 sigmoid。</li>
+</ul>
 <p><img src="/../image/image-20220507154700894.png" alt="image-20220507154700894"></p>
 </li>
 </ul>
@@ -100,10 +110,10 @@
 </li>
 <li><p>计算Gradient，根据 Gradient 把 $\Theta_i$更新成$\Theta_ {i+1}$</p>
 </li>
-<li><p>重复步骤 2 直至指定的计算次数 或 算出的Gradient 为 $0$ 向量.</p>
+<li><p>重复步骤 2 直至指定的计算次数 或 算出的 Gradient 为 $0$ 向量.</p>
 </li>
 </ol>
-<p>​     实际上，在做 Gradient Decent 的时候，会把原始数据分成一个一个的Batch。用第 $i$ 个Batch里的Data 算 Loss ，然后更新$\Theta _i$，然后用更新后的$\Theta_i$ 来对第 $i+1$ 个 Batch 的 Data 算 Loss  然后继续更新。每一次更新参数叫做一次Update。遍历完所有的Batch之后叫做一个Epoch。Batch 的 Size 也是一个 hyperparameter 。</p>
+<p>​     实际上，在做 Gradient Decent 的时候，会把原始数据分成一个一个的Batch。用第 $i$ 个 Batch 里的 Data 算 Loss ，然后更新 $\Theta _i$ ，然后用更新后的 $\Theta_i$  来对第  $i+1$  个 Batch 的 Data 算 Loss  然后继续更新。每一次更新参数叫做一次 Update 。遍历完所有的 Batch 之后叫做一个 Epoch 。Batch 的 Size 也是一个 hyperparameter 。</p>
 <h3 id="一些新名字"><a href="#一些新名字" class="headerlink" title="一些新名字"></a>一些新名字</h3><p><img src="/../image/image-20220507155248015.png" alt="image-20220507155248015"></p>
 <p>Neuron, Neural Network, hidden layer, DeepLearning 如图所示，其中$a_i &#x3D;  sigmoid (b_i + \sum_j w_{ ij } x_j )$ 或 $a_i &#x3D;  max(0, b_i + \sum_j w_{ij} x_j)$。</p>
 <p>Overfitting：在训练资料上在变好，但是在实际上没有变好。</p>

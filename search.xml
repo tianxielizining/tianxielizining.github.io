@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>那些书们</title>
-    <url>/2022/05/04/Books/</url>
-    <content><![CDATA[<p>总结了一下读过的书和想读的书～</p>
- <span id="more"></span>
-
-<h3 id="四月份书单（已读完）"><a href="#四月份书单（已读完）" class="headerlink" title="四月份书单（已读完）"></a>四月份书单（已读完）</h3><p>《三体》刘慈欣</p>
-<p>《三体II：黑暗森林》刘慈欣</p>
-<p>《自律100天》杨晓霞</p>
-<h3 id="五月份书单（已读完）"><a href="#五月份书单（已读完）" class="headerlink" title="五月份书单（已读完）"></a>五月份书单（已读完）</h3><p>《断舍离》 山下英子（日）</p>
-<h3 id="我的书架"><a href="#我的书架" class="headerlink" title="我的书架"></a>我的书架</h3><p>《三体Ⅲ：死神永生》刘慈欣</p>
-<p>《银河系搭车客指南》 道格拉斯·亚当斯（英）</p>
-<p>《出梁庄记》 梁鸿</p>
-<p>《梁庄十年》 梁鸿</p>
-<p>《你当像鸟飞往你的山》 塔拉·韦斯特弗（美）</p>
-<p>《蛤蟆先生去看心理医生》 罗伯特·戴博德 （英）</p>
-]]></content>
-      <categories>
-        <category>书单</category>
-      </categories>
-      <tags>
-        <tag>Books</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>李宏毅-机器学习课程-1.1</title>
     <url>/2022/05/04/ML_1/</url>
     <content><![CDATA[<p>本章为第一讲的学习笔记：深度学习基本概念简介（上），<a href="https://www.youtube.com/watch?v=Ye018rCVvOo">视频链接</a>，<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/regression%20(v16).pdf">slides</a>。</p>
@@ -72,6 +48,30 @@
       </tags>
   </entry>
   <entry>
+    <title>那些书们</title>
+    <url>/2022/05/04/Books/</url>
+    <content><![CDATA[<p>总结了一下读过的书和想读的书～</p>
+ <span id="more"></span>
+
+<h3 id="四月份书单（已读完）"><a href="#四月份书单（已读完）" class="headerlink" title="四月份书单（已读完）"></a>四月份书单（已读完）</h3><p>《三体》刘慈欣</p>
+<p>《三体II：黑暗森林》刘慈欣</p>
+<p>《自律100天》杨晓霞</p>
+<h3 id="五月份书单（已读完）"><a href="#五月份书单（已读完）" class="headerlink" title="五月份书单（已读完）"></a>五月份书单（已读完）</h3><p>《断舍离》 山下英子（日）</p>
+<h3 id="我的书架"><a href="#我的书架" class="headerlink" title="我的书架"></a>我的书架</h3><p>《三体Ⅲ：死神永生》刘慈欣</p>
+<p>《银河系搭车客指南》 道格拉斯·亚当斯（英）</p>
+<p>《出梁庄记》 梁鸿</p>
+<p>《梁庄十年》 梁鸿</p>
+<p>《你当像鸟飞往你的山》 塔拉·韦斯特弗（美）</p>
+<p>《蛤蟆先生去看心理医生》 罗伯特·戴博德 （英）</p>
+]]></content>
+      <categories>
+        <category>书单</category>
+      </categories>
+      <tags>
+        <tag>Books</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>李宏毅-机器学习课程-1.2</title>
     <url>/2022/05/07/ML_2/</url>
     <content><![CDATA[<p>本章为第一讲的学习笔记：深度学习基本概念简介（下），<a href="https://www.youtube.com/watch?v=bHcJCp2Fyxs">视频链接</a>，<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/regression%20%28v16%29.pdf">slides</a>。</p>
@@ -79,7 +79,11 @@
 
 <p>Model的类型</p>
 <ul>
-<li><p>Linear model： $y &#x3D; b + wx_1$ (单个特征)   $y &#x3D; b + \sum_j w_j x_j$ (多个特征)</p>
+<li><p>Linear model：</p>
+<ul>
+<li>$y &#x3D; b + wx_1$ (单个特征)   </li>
+<li>$y &#x3D; b + \sum_j w_j x_j$ (多个特征)</li>
+</ul>
 <p><img src="/../image/image-20220507130047612.jpg" alt="image-20220507130047612"></p>
 </li>
 <li><p>Piecewise Linear model：可以用Sigmoid 或 Rectified Linear Unit (ReLU) 等 Activation Function 来表示。</p>

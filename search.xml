@@ -12,9 +12,9 @@
 <h3 id="五月份书单（已读完）"><a href="#五月份书单（已读完）" class="headerlink" title="五月份书单（已读完）"></a>五月份书单（已读完）</h3><p>《断舍离》 山下英子（日）</p>
 <p>《出梁庄记》 梁鸿</p>
 <p>《人间便利店》 村田沙耶香（日）</p>
+<p>《山茶文具店》小川糸（日）</p>
 <h3 id="我的书架"><a href="#我的书架" class="headerlink" title="我的书架"></a>我的书架</h3><p>《三体Ⅲ：死神永生》刘慈欣</p>
 <p>《银河系搭车客指南》 道格拉斯·亚当斯（英）</p>
-<p>《山茶文具店》小川糸（日）</p>
 <p>《梁庄十年》 梁鸿</p>
 <p>《你当像鸟飞往你的山》 塔拉·韦斯特弗（美）</p>
 <p>《蛤蟆先生去看心理医生》 罗伯特·戴博德 （英）</p>
@@ -123,6 +123,75 @@
 <h3 id="一些新名字"><a href="#一些新名字" class="headerlink" title="一些新名字"></a>一些新名字</h3><p><img src="/../image/image-20220507155248015.png" alt="image-20220507155248015"></p>
 <p>Neuron, Neural Network, hidden layer, DeepLearning 如图所示，其中$a_i &#x3D;  sigmoid (b_i + \sum_j w_{ ij } x_j )$ 或 $a_i &#x3D;  max(0, b_i + \sum_j w_{ij} x_j)$。</p>
 <p>Overfitting：在训练资料上在变好，但是在实际上没有变好。</p>
+]]></content>
+      <categories>
+        <category>李宏毅-机器学习课程</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>李宏毅-机器学习课程-2.1</title>
+    <url>/2022/05/24/ML_3/</url>
+    <content><![CDATA[<p>本篇为第二讲的学习笔记：类神经网络训练不起来怎么办（1），<a href="https://www.youtube.com/watch?v=WeHM2xpYQpw">视频链接</a>，<a href="https://speech.ee.ntu.edu.tw/~hylee/ml/ml2021-course-data/overfit-v6.pdf">slides</a>。</p>
+ <span id="more"></span>
+
+<h3 id="机器学习任务攻略-如何更好得进行预测？"><a href="#机器学习任务攻略-如何更好得进行预测？" class="headerlink" title="机器学习任务攻略-如何更好得进行预测？"></a>机器学习任务攻略-如何更好得进行预测？</h3><h4 id="任务攻略"><a href="#任务攻略" class="headerlink" title="任务攻略"></a>任务攻略</h4><p><img src="/../image/1653378089149.jpg" alt="image-20220507130047612"></p>
+<h4 id="攻略详解"><a href="#攻略详解" class="headerlink" title="攻略详解"></a>攻略详解</h4><ol>
+<li><p>检查 loss on training data，看 model 在 training data 上有没有学起来。如果发现在 training data 上的 loss 很大，需要找 loss 大的原因。</p>
+<ul>
+<li><p>model bias （上节课所学的内容）</p>
+<ul>
+<li><p>model is too simple. 类似于大海捞针，针不在海里。model不好的话，无论怎么训练都得不到好的结果。</p>
+</li>
+<li><p>solution： 重新设计model，给予model更大的弹性。例如，可以增加输入的feature，如果前一天的信息不够多，可以用前一周的信息；也可以用deep learning 来增加更多的弹性。</p>
+<img src="../image/1653379106850.jpg" alt="image-20220507130047612" style="zoom:22%;" /></li>
+</ul>
+</li>
+<li><p>optimization </p>
+<ul>
+<li>例如 gradient descent 方法的不足，使得不能帮我们找到 loss 低的model。大海捞针，针在海里，但是我们并没有办法把它捞上来。</li>
+<li>solution：More powerful optimization technology （next  lecture）</li>
+</ul>
+</li>
+<li><p>如何判断是因为 model bias 还是因为 optimization？</p>
+<ul>
+<li>Gaining the insights from comparison<ul>
+<li>建议先跑一些比较小的比较浅的network，甚至用一些不是deep learning的方法，比如说linear model，support vector machine。support vector machine 可能比较容易做optimize。</li>
+<li>如果深的model和浅的model比起来，明明弹性更大，但是在训练集上表现效果更差，则说明是optimization的问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如果 loss on training data 小，但是 loss on testing data 大，可能遇到overfitting的问题</p>
+<ul>
+<li><p>Overfitting</p>
+<ul>
+<li><p>出现的原因，一个极端的例子：</p>
+<img src="../image/1653381130331.jpg" alt="image-20220507130047612" style="zoom:52%;" />
+</li>
+<li><p>Solution： </p>
+<ul>
+<li>增加训练集</li>
+<li>Data augmentation，用一些对于问题的理解创建资料，例如左右翻转，裁剪等等。</li>
+<li>增加一些限制，例如限制为二次曲线。CNN会给定比较多的限制。但是限制多会产生model bias。需要做好 Bias-Complexity Trade-off<ul>
+<li>Less parameters, sharing parameters。比较少的参数，让一些变量共用参数。</li>
+<li>Less features</li>
+<li>Early stopping </li>
+<li>Regularization</li>
+<li>Dropout</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>李宏毅-机器学习课程</category>
